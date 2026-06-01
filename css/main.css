@@ -1,0 +1,1054 @@
+html { scroll-behavior: smooth; }
+/* Umumiy sahifa uchun quti modelini to'g'rilash */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Butun sayt foni toza oq */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* ===== Header asosiy qutisi ===== */
+.main-header {
+    width: 100%;
+    background-color: #ffffff; 
+    border-bottom: 1px solid #f1f1f1; 
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Sayt skroll bo'lganda header tepada yopishib turadi */
+}
+
+/* Saytni o'rtaga olib keluvchi asosiy konteyner */
+.main-header .container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo svg {
+    display: block;
+    cursor: pointer;
+}
+
+/* Telefonda 3 ta chiziqli boladigan joy noutbukda korinmasligi uchun */
+#menu-bar, .hamburger {
+    display: none;
+}
+
+/* Navigatsiya menyusi */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px; 
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar .nav-links li a:hover {
+    color: #0c4972c1; 
+}
+
+/* O'ng tomondagi Ikonkalar va Profil qismi */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px; 
+}
+
+/* Qidiruv ikonkasiga figma stili */
+.header-icons .fa-magnifying-glass {
+    font-size: 20px;
+    color: #111111;
+    cursor: pointer;
+}
+
+/* Profil yumaloq rasmi */
+.profile-link img {
+    width: 40px;  
+    height: 40px;
+    border-radius: 50%; /* <--Global */
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== Hero asosiy qismi ===== */
+.hero {
+    margin-top: 40px; 
+    margin-bottom: 40px;
+}
+
+/* Rasm va matnni yonma-yon joylashtirish */
+.hero-container {
+    display: flex;
+    border-radius: 16px; 
+    overflow: hidden; 
+}
+
+/* Chap tomondagi rasm qismi */
+.hero-image {
+    flex: 1; 
+    height: 450px; 
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* O'ng tomondagi matnlar bloki */
+.hero-content {
+    flex: 1;
+    background-color: #E8F2FF; 
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    position: relative; 
+}
+
+/* 85% trend qismi */
+.trending {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+.trending i {
+    font-size: 16px;
+}
+
+/* Asosiy sarlavha */
+.hero-content h1 {
+    font-size: 44px;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Ta'rif matni */
+.hero-content p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* O'ng past burchakdagi strelka (Tugma) */
+.hero-link {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-decoration: none;
+    color: #111111;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* ===== Asosiy sektsiya masofasi ===== */
+.delicious-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Sarlavha stili */
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+
+/* 3 ta kartochkani yonma-yon qilish */
+.delicious-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px; 
+}
+
+/* Har bir kartochka stili */
+.recipe-card {
+    background-color: transparent; 
+}
+
+/* Rasm konteyneri va uning burchaklarini yumaloq qilish */
+.recipe-image {
+    width: 100%;
+    height: 250px; 
+    border-radius: 12px; 
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Yulduzchalar (Rating) qismi */
+.rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+/* Yulduzchalarning to'q sariq rangi */
+.rating i {
+    color: #FF5A43; 
+    font-size: 14px;
+}
+
+/* Kartochka ichidagi taom nomi */
+.recipe-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111111;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ===== Sweet Tooth bo'limi ===== */
+.sweet-tooth-section {
+    padding-bottom: 60px; 
+}
+
+/* ====== Kategoriyalar sektsiyasi masofasi ====== */
+.categories-section {
+    padding: 40px 0 60px 0;
+}
+
+/* 6 ta dumaloq elementni yonma-yon qilish */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 30px; 
+}
+
+/* Har bir element (rasm + matn) konteyneri */
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+/* Rasmlar konteyneri - ularni mukammal dumaloq qilish */
+.category-image {
+    width: 140px; 
+    height: 140px; 
+    border-radius: 50%;
+    overflow: hidden;   
+    margin-bottom: 12px; 
+    transition: transform 0.3s ease;
+}
+
+/* Ichidagi haqiqiy rasm stili */
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Kategoriya nomi (matni) */
+.category-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.category-item:hover .category-image {
+    transform: scale(1.06);
+}
+
+/* ===== Newsletter umumiy foni - sahifa bo'ylab to'liq yoyiladi ===== */
+.newsletter-section {
+    padding: 60px 0;
+}
+
+/* Aynan konteyner ichidagi kontent blokiga pushti fon beramiz */
+.newsletter-content {
+    background-color: #ffe6db;
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Asosiy sarlavha */
+.newsletter-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111111;;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* Kichik ta'rif matni */
+.newsletter-content p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 32px;
+}
+
+/* Email (Input va Buttonni yonma-yon yopishtirish) */
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    max-width: 480px;
+    margin: 0 auto 24px auto; 
+}
+
+/* Email yoziladigan joy (Input) */
+.subscribe-form input {
+    flex: 1;
+    padding: 16px 20px;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+    border-top-left-radius: 4px;  
+    border-bottom-left-radius: 4px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* "JOIN" tugmasi */
+.subscribe-form button {
+    background-color: #FF5A43; 
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 32px;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+}
+
+/* Eng pastdagi qoidalar matni */
+.terms-text {
+    font-size: 13px !important; 
+    color: #777777;
+    margin: 0;
+}
+
+/* Ichidagi havola */
+.terms-text a {
+    color: #222;
+    text-decoration: underline; 
+}
+
+/* ===== HAND-PICKED COLLECTIONS SECTION ===== */
+
+/* Bo'limning umumiy yuqori va pastki masofasi */
+.collections-section {
+    padding: 60px 0;
+}
+
+/* Sarlavha stili */
+.collections-section .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+/* 2 ta teng ustunli Grid */
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px; 
+}
+
+/* Kartochka qutisi */
+.collections-grid .collection-card {
+    background-color: #ffffff;
+    border: 1px solid #F1F1F1;
+    border-radius: 16px; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02); 
+}
+
+/* Rasm konteyneri - RASM SHAKLINI CHEKLASH */
+.collections-grid .collection-image {
+    width: 100%;
+    height: 340px; /* Figmadagi standart balandlik */
+    overflow: hidden;
+}
+
+/* Haqiqiy rasm stili - Proporsiyani buzmasdan joylash */
+.collections-grid .collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Kartochkaning pastki qismi (Matn va tugma joylashuvi) */
+.collections-grid .collection-footer {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    gap: 16px;
+}
+
+/* To'plam sarlavhasi (Masalan: Sushi Combos...) */
+.collections-grid .collection-footer h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* "156 Recipes" yozuvining atrofidagi tugma stili */
+.collections-grid .recipe-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    padding: 8px 16px;
+    border: 1px solid #E0E0E0; /* Figmadagi ingichka kulrang ramka */
+    border-radius: 6px;
+    white-space: nowrap;       /* Matn siqilib ikki qatorga o'tib ketmaydi */
+    background-color: #ffffff;
+}
+
+
+/* ===== LATEST RECIPES SECTION ===== */
+   
+
+/* Bo'limning umumiy atrofi masofasi */
+.latest-recipes-section {
+    padding: 60px 0;
+}
+
+/* Katta sarlavha stili (Latest Recipes) */
+.latest-recipes-section .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+/* 4 ta teng ustunli mukammal Grid tizimi */
+.latest-recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 30px; 
+    margin-bottom: 80px;
+}
+
+/* Shaxmat kabi tepa va past korsatish */
+.latest-recipes-grid .latest-recipe-card:nth-child(even) {
+    transform: translateY(24px); /* Kartochkani 24px pastga suradi */
+}
+
+/* Har bir taom kartochkasi qutisi */
+.latest-recipe-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    transition: transform 0.3s ease; 
+}
+
+/* RASMLARNI BITTA RAZMERGA SOLUVCHI QOLIP */
+.latest-recipe-image {
+    width: 100%;
+    height: 200px; /*  Hamma rasm balandligi shu yerda 200px */
+    border-radius: 8px;
+    overflow: hidden;    
+    margin-bottom: 16px; 
+}
+
+/* Haqiqiy rasm - Har xil o'lchamdagi rasmlarni davolovchi qism */
+.latest-recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Taom nomlari stili */
+.latest-recipe-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Load More Tugmasi Markazga Joylash */
+/* == Tugmani qoq markazga tekislovchi quti == */
+.load-more-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.latest-load-more-btn {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 40px;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.latest-load-more-btn:hover {
+    background-color: #000000; 
+    color: #ffffff;
+    border-color: #000000;
+}
+
+/* ===== SITE FOOTER =====*/
+.site-footer {
+    background-color: #F9F9F9;
+    padding: 60px 0 30px 0;
+    font-family: 'Inter', sans-serif; 
+}
+
+/* Katta asosiy bloklarni yonga joylashtirish */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+/* 1. Chap tarafdagi Brend va matn qismi */
+.site-footer .logo {
+    max-width: 360px; 
+}
+
+.site-footer .logo svg {
+    margin-bottom: 24px;
+    display: block;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #7F7F7F;
+    margin: 0;
+}
+
+/* 2. O'ng tarafdagi Linklar guruhini yonga tizish */
+.footer-links-group {
+    display: flex;
+    gap: 80px; /* Ustunlar orasi */
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #7F7F7F;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #000000; 
+}
+
+/* 3. Ajratuvchi chiziq */
+.footer-line {
+    border: 0;
+    height: 1px;
+    background-color: #E5E5E5;
+    margin: 0 0 30px 0;
+}
+
+/* 4. Pastki qism (Copyright va Ijtimoiy tarmoqlar) */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #A3A3A3;
+    margin: 0;
+}
+
+/* Ijtimoiy tarmoq */
+.footer-social-icons {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-social-icons a {
+    color: #7F7F7F;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.footer-social-icons a:hover {
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+/* ===== NAVBAR, HEADER RESPONSIVE ===== */
+@media (max-width: 768px) {
+    /* Selektorni to'liq yozib kuchini oshirdik */
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 12px 15px;
+    }
+
+    .main-header .logo svg {
+        width: 140px;
+        height: auto;
+    }
+
+    .main-header .navbar .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-header .navbar .nav-links li a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .main-header .header-icons {
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-header .profile-link img {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* ===== HERO SECTION RESPONSIVE ===== */
+    @media (max-width: 768px) {
+    .hero {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
+    .hero .hero-container {
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    .hero .hero-container .hero-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero .hero-container .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero .hero-container .hero-content {
+        width: 100%;
+        padding: 30px 20px 60px 20px;
+    }
+
+    .hero .hero-container .hero-content h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .hero .hero-container .hero-content p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .hero .hero-container .hero-content .hero-link {
+        bottom: 20px;
+        right: 20px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+}
+
+    /*   SUPER DELICIOUS & SWEET TOOTH BO'LIMLARI */
+
+    /* 1. Bo'limlarning chekka masofalari va havosi */
+    .delicious-section {
+        padding: 25px 15px;
+    }
+    
+    .sweet-tooth-section {
+        padding: 35px 15px 40px 15px; /* Tepadan 35px, pastdan 40px chiroyli masofa */
+    }
+
+    /* 2. Ikkala bo'lim uchun umumiy sarlavha o'lchamlari */
+    .delicious-section .section-title,
+    .sweet-tooth-section .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* 3. HTMLda "delicious-grid" ishlatilgan barcha joylarni 1 ta ustun qilamiz */
+    .delicious-grid {
+        grid-template-columns: 1fr; 
+        gap: 24px;
+    }
+
+    /* 4. Kartochkalar ichidagi rasmlarning telefondagi bir xil o'lchami */
+    .recipe-card .recipe-image {
+        height: 240px; 
+        margin-bottom: 14px;
+    }
+
+    /* 5. Taom va shirinlik nomlarining matn shriftlari */
+    .recipe-card .recipe-info h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    /* ===== POPULAR CATEGORIES BO'LIMI RESPONSIVE VARIANTI ===== */
+    
+    /*  Chekka masofalarni telefonga moslaymiz */
+    .categories-section {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Ota element: 6 ta ustunni telefonda 3 ta ustunga o'tkazamiz */
+    .categories-section .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px; /* Telefonda sal zichroq qilish */
+    }
+
+    /* Dumaloq rasmlar o'lchamini telefon ekraniga moslab kichraytiramiz */
+    .categories-section .categories-grid .category-item .category-image {
+        width: 90px;  
+        height: 90px;
+        margin-bottom: 8px;
+    }
+
+    /* Matn element: Shrift o'lchamini moslaymiz */
+    .categories-section .categories-grid .category-item .category-name {
+        font-size: 14px;
+    }
+
+    /* ===== EMAIL NEWSLETTER BO'LIMI RESPONSIVE VARIANTI ===== */
+    
+    /* Tashqi va ichki masofalarni telefonga moslaymiz */
+    .newsletter-section {
+        padding: 20px 0; /* Sayt chetlariga yopishib turishi uchun 0 */
+    }
+
+    .newsletter-section .newsletter-content {
+        padding: 40px 16px; /* Pushti blok ichidagi havo */
+    }
+
+    /* Sarlavha o'lchamini telefonda ixcham qilamiz */
+    .newsletter-section .newsletter-content h2 {
+        font-size: 26px; 
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    /* Ta'rif matni */
+    .newsletter-section .newsletter-content p {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    /* Input va Buttonni ustma-ust qilamiz */
+    .newsletter-section .newsletter-content .subscribe-form {
+        flex-direction: column; /* Yonma-yondan ustma-ust rejimga o'tadi */
+        gap: 12px; /* Ikkalasi orasida masofa ochamiz */
+        width: 100%;
+    }
+
+    /* Email yoziladigan joy */
+    .newsletter-section .newsletter-content .subscribe-form input {
+        width: 100%;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* JOIN tugmasi */
+    .newsletter-section .newsletter-content .subscribe-form button {
+        width: 100%;
+        padding: 16px 0; /* Input bilan bir xil balandlikda bo'lishi uchun */
+        border-radius: 4px; /* Buni ham hamma burchaklari toliq yumaloq */
+    }
+
+    /* Eng tagidagi shartlar matni */
+    .newsletter-section .newsletter-content .terms-text {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+    /*  ===== HAND-PICKED COLLECTIONS BO'LIMI RESPONSIVE VARIANTI ===== */
+    
+    /* Bo'limning chekka masofalarini telefonga moslaymiz */
+    .collections-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Sarlavhani telefonda ixchamroq qilamiz */
+    .collections-section .section-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    /* Grid elementlarining orasini telefonda sal yaqinlashtiramiz */
+    .collections-section .collections-grid {
+        gap: 24px 16px;
+    }
+
+    /* Telefonda rasmlar balandligini sal pasaytiramiz */
+    .collections-section .collections-grid .collection-image {
+        height: 200px; /* 340px telefonda juda uzunlik qiladi */
+    }
+
+    /* Matnlar ota konteyneri: Eng asosiy o'zgarish shu yerda */
+    .collections-section .collections-grid .collection-footer {
+        padding: 16px; 
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px; /* Sarlavha va badge orasida masofa */
+    }
+
+    /* To'plam sarlavhasi */
+    .collections-section .collections-grid .collection-footer h3 {
+        font-size: 15px; 
+        line-height: 1.3;
+    }
+
+    /* "156 Recipes" nishoni */
+    .collections-section .collections-grid .recipe-count {
+        font-size: 11px; 
+        padding: 4px 10px; 
+    }
+
+    /* ===== LATEST RECIPES BO'LIMI RESPONSIVE ===== */
+    
+    /* Tashqi va ichki masofalarni telefonga moslaymiz */
+    .latest-recipes-section {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Sarlavhani telefonda sal ixcham qilamiz */
+    .latest-recipes-section .section-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    /* 4 ta ustunni telefonda 2 ta ustunga o'tkazamiz */
+    .latest-recipes-section .latest-recipes-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 24px 16px;
+        margin-bottom: 40px; /* "Load More" tugmasi bilan oraliq masofa */
+    }
+
+    /* == Telefonda shaxmat effektini to'liq o'chiramiz == */
+    .latest-recipes-section .latest-recipes-grid .latest-recipe-card:nth-child(even) {
+        transform: translateY(0); 
+    }
+
+    /* Rasm qolipi balandligini telefonga moslaymiz */
+    .latest-recipes-section .latest-recipes-grid .latest-recipe-image {
+        height: 140px; /* Telefonda ideal ko'rinadigan rasm balandligi */
+        margin-bottom: 10px;
+    }
+
+    /* Taom nomlari shrifti */
+    .latest-recipes-section .latest-recipes-grid .latest-recipe-card h3 {
+        font-size: 14px; /* 18px telefonda juda katta, 14px silliqqina turadi */
+        line-height: 1.3;
+    }
+
+    /* == LOAD MORE TUGMASI == */
+    .latest-recipes-section .load-more-container .latest-load-more-btn {
+        width: 100%; /* Telefonda tugma butun ekran bo'ylab cho'zilishi qulay */
+        padding: 12px 0;
+        font-size: 15px;
+    }
+
+    /* --- MOBIL INTERFEYS UCHUN RECOVERY (MAX-WIDTH: 768px) --- */
+    @media (max-width: 768px) {
+        .site-footer {
+            padding: 40px 0 24px 0; /* Ustki va pastki bo'shliqlarni telefonga moslaymiz */
+        }
+
+        /* 1. Asosiy bloklarni ustma-ust tushiramiz */
+        .footer-top {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px; 
+            margin-bottom: 40px;
+        }
+
+        /* Brend matni to'liq kenglikni egallashi uchun */
+        .site-footer .logo {
+            max-width: 100%;
+        }
+
+        .site-footer .logo svg {
+            margin-bottom: 16px;
+        }
+
+        /* 2. Linklar guruhini telefonda 2 ustunli shaxmat yoki ustma-ust qiladi */
+        .footer-links-group {
+            width: 100%;
+            flex-wrap: wrap; 
+            gap: 40px 16px; /* Satrlar orasi 40px, ustunlar orasi 16px */
+        }
+
+        /* Har bir ustun telefonda ekranning salkam yarmini chiroyli egallaydi */
+        .footer-column {
+            flex: 1 1 calc(50% - 16px);
+            min-width: 140px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 16px;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        /* 3. Ajratuvchi chiziq */
+        .footer-line {
+            margin: 0 0 24px 0;
+        }
+
+        /* 4. Copyright va Ijtimoiy tarmoqlar */
+        .footer-bottom {
+            flex-direction: column-reverse; 
+            align-items: center;
+            text-align: center;
+            gap: 24px; /* Ular orasidagi vertikal masofa */
+        }
+
+        .copyright {
+            font-size: 13px;
+        }
+
+        .footer-social-icons {
+            gap: 28px; /* Telefonda barmoq bilan bosish oson bo'lishi uchun ikonkalar orasini ochamiz */
+        }
+        
+        .footer-social-icons a {
+            font-size: 18px; 
+        }
+    }
+
+    /* ===== Telefonda 3 ta chiqziq bolishi uchun RESPONSIVE ===== */
+    @media (max-width: 768px) {
+    .hamburger {
+        display: block !important;
+        font-size: 24px;
+        cursor: pointer;
+        color: #111111;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .navbar .nav-links {
+        display: none !important; 
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 15px 0;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 12px 0;
+    }
+
+    #menu-bar:checked ~ .nav-links {
+        display: flex !important;
+    }
+    
+    #menu-bar {
+        display: none !important;
+    }
+}
+}
